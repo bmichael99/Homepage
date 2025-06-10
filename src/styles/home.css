@@ -1,0 +1,21 @@
+:root{
+
+}
+
+html{
+    background-color: white;
+}
+
+@media (max-width: 1200px){
+    html{
+        background-color: rgb(224, 224, 224);
+    }
+}
+
+
+@media (max-width: 600px){
+    html{
+        background-color: rgb(179, 179, 179);
+    }
+}
+
