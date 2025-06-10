@@ -144,6 +144,7 @@ main{
     justify-self: center;
     max-width: 1000px;
     text-align:left;
+    padding-bottom:100px;
 }
 
 main h2{
@@ -230,7 +231,43 @@ main .card .bottom .card-header svg{
     background-color: var(--card6-color);
 }
 
+/*Footer*/
 
+footer{
+    background-color: var(--highlight-color);
+    color:white;
+    padding:32px 16px;
+    display:flex;
+    justify-content: center;
+}
+
+footer .left-content{
+    max-width:400px;
+    display:flex;
+    flex-direction: column;
+    gap:24px;
+}
+
+footer .left-content .contact-header-text{
+    font-weight: normal;
+    padding-bottom:16px;
+}
+
+footer .left-content .links{
+    display:flex;
+    gap:16px;
+}
+
+footer .left-content .links svg{
+    width:40px;
+    height:40px;
+    cursor:pointer;
+}
+
+footer .right-content img{
+    width:600px;
+    object-fit: cover;
+}
 
 /*Media Queries*/
 
