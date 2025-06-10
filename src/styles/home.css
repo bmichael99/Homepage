@@ -1,10 +1,238 @@
-:root{
+/*  */
+* {
+       margin: 0;
+       padding: 0;
+   }
 
+
+@font-face {
+    font-family: 'Playfair';
+    src: url('../assets/fonts/PlayfairDisplay-VariableFont_wght.ttf') format('ttf-variations');
+    src: url('../assets/fonts/PlayfairDisplay-VariableFont_wght.ttf') format('ttf') tech('variations');
+    font-weight: 300 900;
+    font-stretch: 25% 151%;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../assets/fonts/Roboto-VariableFont_wdth\,wght.ttf') format('ttf-variations');
+    src: url('../assets/fonts/Roboto-VariableFont_wdth\,wght.ttf') format('ttf') tech('variations');
+    font-weight: 100 900;
+    font-stretch: 25% 151%;
+    font-style: normal;
+}
+
+
+:root{
+--primary-font: Playfair, sans-serif;
+--secondary-font: Roboto, sans-serif;
+--highlight-color: #0891B2;
+--card1-color: #9e1c1c;
+--card2-color: #7C75CA;
+--card3-color: #5E8F4D;
+--card4-color: #C363B4;
+--card5-color: #D88F39;
+--card6-color: #4BA2D2;
+--light-text: rgb(90, 90, 90);
 }
 
 html{
     background-color: white;
+    
+    
 }
+
+body{
+    
+}
+
+/* Header */
+
+.background-shape{
+    position: absolute;
+    width:100%;
+    height:500px;
+    background: var(--highlight-color);
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0% 100%);
+    z-index: -1;
+}
+
+header{
+    display:flex;
+    justify-content: center;
+    
+}
+
+.aboutme{
+    display:flex;
+    margin-top:80px;
+    margin-bottom: 100px;
+}
+
+
+
+header .right-content{
+    padding:20px;
+    max-width:600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:20px;
+    background-color: white;
+    margin-top:40px;
+    margin-bottom:40px;
+    box-shadow: 2px 2px 10px rgb(129, 129, 129);
+}
+header .left-content{
+    position:relative;
+}
+
+header .left-content p{
+  position: absolute;
+  bottom: 10px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 3.5rem;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  width:100%;
+  text-align: center;
+  z-index: 3;
+}
+
+header .right-content h2{
+    font-family: var(--primary-font);
+    font-weight: normal;
+    font-size:2rem;
+}
+
+header .right-content p{
+    font-size:1rem;
+    color: var(--light-text);
+    font-family: var(--primary-font);
+    line-height: 1.5rem;
+}
+
+header .left-content img{
+    width:400px;
+    height:425px;
+    object-fit: cover;
+    box-shadow: 2px 2px 10px rgb(43, 43, 43);
+    position: relative;
+    z-index: 2;
+}
+
+header .links{
+    display:flex;
+    gap:12px;
+    justify-content: end;
+}
+
+header svg{
+    width:30px;
+    height:30px;
+    cursor:pointer;
+}
+
+/*Main Content*/
+
+main{
+    display:flex;
+    flex-direction: column;
+    justify-self: center;
+    max-width: 1000px;
+    text-align:left;
+}
+
+main h2{
+    text-align: left;
+    font-weight:normal;
+    font-size: 2rem;
+}
+
+main .card-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    grid-auto-rows: 325px;
+    gap: 50px;
+    max-width:1000px;
+    padding-top:15px;
+}
+
+main .card{
+    border:1px solid black;
+    display:grid;
+    grid-template-rows:1.5fr 1fr;
+}
+
+main .card .top{
+    color:white;
+    font-size:2rem;
+    text-align: center;
+    padding:32px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .card .bottom{
+    padding:8px 16px;
+    display:flex;
+    flex-direction: column;
+    gap:8px;
+}
+
+main .card .bottom .card-header{
+    display:flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    align-items: center;
+}
+
+main .card .bottom > p{
+    color: var(--light-text);
+}
+
+main .card .bottom .card-header .nav{
+    display:flex;
+    gap:8px;
+}
+
+main .card .bottom .card-header svg{
+    width:20px;
+    height:20px;
+    cursor:pointer;
+}
+
+#card-one .top{
+    background-color: var(--card1-color);
+}
+
+#card-two .top{
+    background-color: var(--card2-color);
+}
+
+#card-three .top{
+    background-color: var(--card3-color);
+}
+
+#card-four .top{
+    background-color: var(--card4-color);
+}
+
+#card-five .top{
+    background-color: var(--card5-color);
+}
+
+#card-six .top{
+    background-color: var(--card6-color);
+}
+
+
+
+/*Media Queries*/
 
 @media (max-width: 1200px){
     html{
