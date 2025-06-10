@@ -153,8 +153,7 @@ main h2{
     text-align: left;
     font-weight:normal;
     font-size: 2rem;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-inline:15px;
 }
 
 main .card-container{
@@ -277,16 +276,54 @@ footer .right-content img{
 
 /*Media Queries*/
 
-@media (max-width: 1200px){
-    html{
-        background-color: rgb(224, 224, 224);
+@media (max-width: 1000px){
+    
+    main .card-container{
+        padding-inline:48px;
     }
+
+    main h2{
+        padding-inline:48px;
+    }
+
+    footer .right-content img{
+        width:300px;
+        height: 400px;
+    }
+
+    .aboutme{
+        flex-direction: column;
+        align-items: center;
+    }
+
 }
 
 
 @media (max-width: 600px){
-    html{
-        background-color: rgb(179, 179, 179);
+
+    footer{
+        flex-direction: column;
+        align-items: center;
+        gap:16px;
+    }
+
+    footer .left-content{
+        padding:8px 0px;
+    }
+
+
+    footer .left-content .links{
+        align-self: center;
+    }
+
+    footer{
+        padding:0;
+        margin:0;
+    }
+
+    footer .right-content img{
+        width:100%;
+        
     }
 }
 
